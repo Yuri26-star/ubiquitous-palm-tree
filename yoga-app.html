@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>面部瑜伽 App 改版项目 - 阎坤妤作品集</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    
+    :root {
+      --brand-purple: #9333ea;
+      --brand-glow: #c084fc;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #050505;
+      color: white;
+      overflow-x: hidden;
+    }
+    
+    .grain {
+      position: fixed;
+      inset: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* 滚动动画样式 */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+    
+    .scroll-animate.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 延迟动画 */
+    .scroll-animate.delay-1 {
+      transition-delay: 0.1s;
+    }
+    
+    .scroll-animate.delay-2 {
+      transition-delay: 0.2s;
+    }
+    
+    .scroll-animate.delay-3 {
+      transition-delay: 0.3s;
+    }
+    
+    /* 箭头图标样式 */
+    .fa-arrow-left, .fa-arrow-right {
+      font-weight: 100;
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  
+  <!-- Background Gradients -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/20 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-300/30 blur-[150px] rounded-full"></div>
+    <div class="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-indigo-500/10 blur-[100px] rounded-full"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/20 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-12">
+        <a href="index.html" class="font-bold text-2xl tracking-tighter">KUNYU.</a>
+        <div class="hidden md:flex items-center gap-1 text-sm font-medium text-white/50">
+          <a href="index.html#about" class="px-4 py-2 hover:text-white transition-colors">关于</a>
+          <span class="opacity-20">|</span>
+          <a href="index.html#work" class="px-4 py-2 hover:text-white transition-colors">经历</a>
+          <span class="opacity-20">|</span>
+          <a href="index.html#projects" class="px-4 py-2 hover:text-white transition-colors">项目</a>
+          <span class="opacity-20">|</span>
+          <a href="index.html#beyond" class="px-4 py-2 hover:text-white transition-colors">生活</a>
+          <span class="opacity-20">|</span>
+          <a href="index.html#contact" class="px-4 py-2 hover:text-white transition-colors">联系</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <button class="text-sm font-medium text-white/70 hover:text-white transition-colors flex items-center gap-2">
+          <i class="fa fa-envelope-o w-4 h-4"></i>
+          2943398587@qq.com
+        </button>
+        <button class="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6 h-10">
+          Let's Talk
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-24">
+    <!-- Header & Title -->
+    <section class="space-y-12 py-10">
+      <a href="index.html#projects" class="text-white/50 hover:text-white hover:bg-white/5 rounded-full px-6 group inline-flex items-center scroll-animate">
+        <i class="fa fa-arrow-left mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform"></i>
+        返回项目经历
+      </a>
+      
+      <div class="space-y-4 scroll-animate delay-1">
+        <div class="flex flex-wrap gap-3">
+          <span class="bg-purple-500/20 text-purple-400 border-purple-500/20 rounded-full px-4 py-1 text-sm uppercase tracking-wider">
+            UI/UX设计
+          </span>
+          <span class="border-white/10 text-white/40 rounded-full px-4 py-1 text-sm">
+            2025.07 - 2025.12
+          </span>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-bold tracking-tight leading-[1.1] max-w-5xl">面部瑜伽 App 改版项目</h1>
+      </div>
+    </section>
+
+    <!-- Project Background -->
+    <section class="max-w-4xl space-y-16 py-10">
+      <div class="prose prose-invert max-w-none scroll-animate delay-2">
+        <div class="space-y-6 mt-20 mb-10">
+          <h3 class="text-4xl font-bold text-white flex items-center gap-4">
+            <span class="w-8 h-[2px] bg-purple-500 rounded-full"></span>
+            项目背景
+          </h3>
+        </div>
+        <p class="text-white/60 text-xl leading-relaxed mb-8 pl-12 border-l border-white/5">
+          面部瑜伽是一款通过面部按摩提拉，帮助用户改善面部状态的健康类软件。本次推出项目改版的设计目标是提升用户的跟课体验，提升会员的转化率。通过将图形，楼层和视觉进行优化，提升用户在使用过程中的体验。
+        </p>
+      </div>
+    </section>
+
+    <!-- Long Image Display -->
+    <section class="space-y-16 py-10">
+      <div class="space-y-10">
+        <div class="flex items-center gap-4 scroll-animate delay-1">
+          <h3 class="text-sm font-bold uppercase tracking-[0.4em] text-white/20">项目展示 / Project Showcase</h3>
+          <div class="flex-1 h-[1px] bg-white/5"></div>
+        </div>
+        <div class="overflow-hidden border border-white/10 bg-white/5 shadow-2xl shadow-black/50 scroll-animate delay-2">
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 1 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-1.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-1.jpg" 
+            alt="面部瑜伽 App 改版项目 - 1" 
+            class="w-full h-auto"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 2 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-2.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-2.jpg" 
+            alt="面部瑜伽 App 改版项目 - 2" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 3 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-3.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-3.jpg" 
+            alt="面部瑜伽 App 改版项目 - 3" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 4 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-4.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-4.jpg" 
+            alt="面部瑜伽 App 改版项目 - 4" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 5 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-5.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-5.jpg" 
+            alt="面部瑜伽 App 改版项目 - 5" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 6 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-6.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-6.jpg" 
+            alt="面部瑜伽 App 改版项目 - 6" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 7 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-7.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-7.jpg" 
+            alt="面部瑜伽 App 改版项目 - 7" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 8 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-8.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-8.jpg" 
+            alt="面部瑜伽 App 改版项目 - 8" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 9 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-9.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-9.jpg" 
+            alt="面部瑜伽 App 改版项目 - 9" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 10 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-10.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-10.jpg" 
+            alt="面部瑜伽 App 改版项目 - 10" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 11 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-11.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-11.jpg" 
+            alt="面部瑜伽 App 改版项目 - 11" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 12 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-12.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-12.jpg" 
+            alt="面部瑜伽 App 改版项目 - 12" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 13 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-13.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-13.jpg" 
+            alt="面部瑜伽 App 改版项目 - 13" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 14 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-14.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-14.jpg" 
+            alt="面部瑜伽 App 改版项目 - 14" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 15 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-15.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-15.jpg" 
+            alt="面部瑜伽 App 改版项目 - 15" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 16 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-16.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-16.jpg" 
+            alt="面部瑜伽 App 改版项目 - 16" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 17 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-17.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-17.jpg" 
+            alt="面部瑜伽 App 改版项目 - 17" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 18 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-18.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-18.jpg" 
+            alt="面部瑜伽 App 改版项目 - 18" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 19 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-19.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-19.jpg" 
+            alt="面部瑜伽 App 改版项目 - 19" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 20 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-20.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-20.jpg" 
+            alt="面部瑜伽 App 改版项目 - 20" 
+            class="w-full h-auto border-t border-white/10"
+          />
+          <!-- 面部瑜伽 App 改版项目 - 详情页图片 21 -->
+          <!-- 更换图片：将图片命名为 yoga-detail-21.jpg 并放入 images 文件夹 -->
+          <img 
+            src="./images/yoga-detail-21.jpg" 
+            alt="面部瑜伽 App 改版项目 - 21" 
+            class="w-full h-auto border-t border-white/10"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-8 pt-32 scroll-animate delay-3">
+        <p class="text-white/30 font-medium">感谢阅读</p>
+        <a href="index.html#projects" class="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-16 h-20 text-xl font-bold shadow-xl shadow-purple-600/20 group inline-flex items-center">
+          返回项目经历板块
+          <i class="fa fa-arrow-right ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-7xl mx-auto px-6 py-16 border-t border-white/5 flex flex-col items-center gap-8 text-sm text-white/20">
+    <div class="flex gap-12 mb-4">
+      <a href="#" class="hover:text-white transition-colors">隐私政策</a>
+      <a href="#" class="hover:text-white transition-colors">服务条款</a>
+      <a href="#" class="hover:text-white transition-colors">作品集说明</a>
+    </div>
+    <p class="tracking-widest uppercase text-[10px] font-bold">© 2026 阎坤妤 个人作品集. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // 滚动动画
+    function handleScrollAnimation() {
+      const elements = document.querySelectorAll('.scroll-animate');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const isVisible = elementTop < window.innerHeight - 100 && elementBottom > 0;
+        
+        if (isVisible) {
+          element.classList.add('active');
+        }
+      });
+    }
+    
+    // 页面加载完成后检查初始动画
+    window.addEventListener('load', () => {
+      handleScrollAnimation();
+    });
+    
+    // 滚动时检查动画
+    window.addEventListener('scroll', handleScrollAnimation);
+  </script>
+</body>
+</html>
